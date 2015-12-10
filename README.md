@@ -1,4 +1,4 @@
-# Bootstrap 3.3.5 Template #
+# Bootstrap 3.3.6 Template #
 
 Needs **CodeKit** to run
 

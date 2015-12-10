@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="cs-CZ">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 3.3.5 Template</title>
+<html lang="cs">
 
-    <link href="css/main.min.css" rel="stylesheet">
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap 3.3.6 Template</title>
+  <meta name="description" content="Template">
+  <link href="css/main.min.css" rel="stylesheet">
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
-    <h1>Hello, world!</h1>
+<body>
+  <h1>Hello, world!</h1>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
 </html>
