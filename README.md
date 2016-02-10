@@ -1,7 +1,27 @@
-# Bootstrap 3.3.6 Template #
+# My Bootstrap 3 Setup #
 
-Needs **CodeKit** to run
+A personal project setup for my ease-of-mind
 
-Folder placement: **Sites/PROJECT_NAME/www/**
+## Current Bootstrap version ##
 
-(Update CodeKit settings to reflect this...)
+3.3.6 (SCSS)
+
+## How to use ##
+
+```
+#!bash
+
+npm install # installs node modules
+# and
+grunt # runs grunt tasks
+# or
+grunt serve # runs grunt tasks and starts PHP server on localhost:8080
+```
+
+## Created by ##
+
+Petr Pacas
+
+[petr.pacas@gmail.com](mailto:petr.pacas@gmail.com)
+
+http://petrpacas.com/

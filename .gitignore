@@ -32,7 +32,7 @@ vendor/cache
 *.sublime-workspace
 nbproject
 Thumbs.db
-# *.codekit
+*.codekit
 
 # Komodo
 .komodotools
