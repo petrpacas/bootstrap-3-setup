@@ -12,10 +12,12 @@ A personal project setup for my ease-of-mind
 #!bash
 
 npm install # installs node modules
-# and
-grunt # runs grunt tasks
+# and then
+grunt # starts reload server w/o dev tasks (localhost:3000)
 # or
-grunt serve # runs grunt tasks and starts PHP server on localhost:8080
+grunt dev # starts reload server w/ dev tasks
+# or
+grunt build # runs build tasks (production)
 ```
 
 ## Created by ##

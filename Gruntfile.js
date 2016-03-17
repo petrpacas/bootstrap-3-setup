@@ -5,9 +5,19 @@ module.exports = function(grunt) {
       options: {
         sourceMap: true
       },
+      dev: {
+        src: [
+          './src/js/bootstrap.min.js',
+          './src/js/main.js'
+        ],
+        dest: './dist/js/main.min.js'
+      },
       build: {
-        src: ['./src/js/bootstrap.min.js', './src/js/main.js'],
-        dest: './dist/js/main.js',
+        src: [
+          './src/js/bootstrap.min.js',
+          './src/js/main.js'
+        ],
+        dest: './dist/js/main.js'
       }
     },
     uglify: {
@@ -27,68 +37,83 @@ module.exports = function(grunt) {
         outFile: './dist/css/main.css',
         sourceMap: true
       },
+      dev: {
+        files: {
+          './dist/css/main.min.css': './src/scss/main.scss'
+        }
+      },
       build: {
         files: {
           './dist/css/main.css': './src/scss/main.scss'
         }
       }
     },
-    cssmin: {
+    postcss: {
       options: {
-        roundingPrecision: -1,
-        sourceMap: [true, './dist/css/main.css.map']
+        map: {
+          inline: false
+        },
+        processors: [
+          require('autoprefixer')({
+            browsers: [
+              'Android 2.3',
+              'Android >= 4',
+              'Chrome >= 20',
+              'Firefox >= 24',
+              'Explorer >= 8',
+              'iOS >= 6',
+              'Opera >= 12',
+              'Safari >= 6'
+            ]
+          }),
+          require('cssnano')()
+        ]
       },
       build: {
-        files: {
-          './dist/css/main.min.css': './dist/css/main.css'
-        }
-      }
-    },
-    php: {
-      dev: {
-        options: {
-          port: 8010
-        }
+        src: './dist/css/main.css',
+        dest: './dist/css/main.min.css'
       }
     },
     browserSync: {
       dev: {
         bsFiles: {
           src: [
-            '**/*.php',
+            // '**/*.php',
+            '**/*.html',
             './dist/css/main.min.css',
             './dist/js/main.min.js'
           ]
         },
         options: {
-          proxy: '127.0.0.1:8010',
-          port: 8080,
+          // proxy: 'bootstrap3.dev',
+          server: './',
+          notify: false,
           open: true,
           watchTask: true
         }
       }
     },
     watch: {
-      css: {
-        files: ['./src/scss/**/*.scss'],
-        tasks: ['sass', 'cssmin']
-      },
       js: {
         files: ['./src/js/**/*.js'],
-        tasks: ['concat', 'uglify']
+        tasks: ['concat:dev']
+      },
+      css: {
+        files: ['./src/scss/**/*.scss'],
+        tasks: ['sass:dev']
       }
     }
   });
 
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-php');
   grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-postcss');
 
-  grunt.registerTask('default', ['concat', 'uglify', 'sass', 'cssmin']);
-  grunt.registerTask('serve', ['default', 'php', 'browserSync', 'watch']);
+  grunt.registerTask('default', ['browserSync', 'watch']);
+  grunt.registerTask('dev', ['concat:dev', 'sass:dev', 'browserSync', 'watch']);
+  grunt.registerTask('build', ['concat:build', 'uglify', 'sass:build', 'postcss']);
 
 };
