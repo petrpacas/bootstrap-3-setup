@@ -8,12 +8,12 @@ A personal project setup for my ease-of-mind
 
 ## How to use ##
 
-```
-#!bash
+VirtualHost name (when using PHP): **bootstrap3.dev** (change this in Gruntfile)
 
+```
 npm install # installs node modules
 # and then
-grunt # starts reload server w/o dev tasks (localhost:3000)
+grunt # starts reload server w/o dev tasks (localhost:3030)
 # or
 grunt dev # starts reload server w/ dev tasks
 # or
