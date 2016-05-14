@@ -1,5 +1,8 @@
 {
   "name": "bootstrap-3-setup",
+  "description": "A personal project setup for my ease-of-mind",
+  "version": "2.1.2",
+  "author": "Petr Pacas",
   "main": "Gruntfile.js",
   "dependencies": {},
   "devDependencies": {

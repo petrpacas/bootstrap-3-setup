@@ -1,22 +1,22 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
+    vars: {
+        jsSrc: [
+          './src/js/bootstrap.min.js',
+          './src/js/main.js'
+        ]
+    },
     concat: {
       options: {
         sourceMap: true
       },
       dev: {
-        src: [
-          './src/js/bootstrap.min.js',
-          './src/js/main.js'
-        ],
+        src: "<%= vars.jsSrc %>",
         dest: './dist/js/main.min.js'
       },
       build: {
-        src: [
-          './src/js/bootstrap.min.js',
-          './src/js/main.js'
-        ],
+        src: "<%= vars.jsSrc %>",
         dest: './dist/js/main.js'
       }
     },
