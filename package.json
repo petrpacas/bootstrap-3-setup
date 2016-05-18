@@ -1,13 +1,13 @@
 {
   "name": "bootstrap-3-setup",
   "description": "A personal project setup for my ease-of-mind",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "author": "Petr Pacas",
   "main": "Gruntfile.js",
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^6.3.6",
-    "cssnano": "^3.5.2",
+    "cssnano": "^3.6.2",
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-concat": "^1.0.1",

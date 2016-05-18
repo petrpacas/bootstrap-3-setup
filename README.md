@@ -1,4 +1,4 @@
-# My Bootstrap 3 Setup (v2.1.2) #
+# My Bootstrap 3 Setup (v2.1.3) #
 
 A personal project setup for my ease-of-mind
 
