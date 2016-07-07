@@ -1,13 +1,12 @@
 {
   "name": "bootstrap-3-setup",
+  "version": "2.1.5",
   "description": "A personal project setup for my ease-of-mind",
-  "version": "2.1.4",
-  "author": "Petr Pacas",
   "main": "Gruntfile.js",
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
-    "cssnano": "^3.7.0",
+    "autoprefixer": "^6.3.7",
+    "cssnano": "^3.7.1",
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-concat": "^1.0.1",
@@ -15,5 +14,12 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:petrpacas/bootstrap-3-setup.git"
+  },
+  "author": "Petr Pacas <petr.pacas@gmail.com> (http://petrpacas.com/)",
+  "license": "MIT",
+  "homepage": "https://github.com/petrpacas/bootstrap-3-setup"
 }

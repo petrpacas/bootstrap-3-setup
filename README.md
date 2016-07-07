@@ -1,4 +1,4 @@
-# My Bootstrap 3 Setup (v2.1.4) #
+# My Bootstrap 3 Setup (v2.1.5) #
 
 A personal project setup for my ease-of-mind
 
@@ -8,16 +8,16 @@ A personal project setup for my ease-of-mind
 
 ## How to use ##
 
-VirtualHost name (when using PHP): **bootstrap3.dev** (change this in Gruntfile)
+When using PHP, change proxy in the Gruntfile's BrowserSync settings accordingly
 
 ```
 npm install # installs node modules
 # and then
-grunt # starts reload server w/o dev tasks (localhost:3030)
+grunt # starts reload server (localhost:3030)
 # or
-grunt dev # starts reload server w/ dev tasks
+grunt dev # runs dev tasks and starts reload server
 # or
-grunt build # runs build tasks (production)
+grunt build # runs build tasks for production
 ```
 
 ## Created by ##

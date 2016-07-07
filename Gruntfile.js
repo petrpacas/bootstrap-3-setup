@@ -2,10 +2,10 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     vars: {
-        jsSrc: [
-          './src/js/bootstrap.min.js',
-          './src/js/main.js'
-        ]
+      jsSrc: [
+        './src/js/bootstrap.min.js',
+        './src/js/main.js'
+      ]
     },
     concat: {
       options: {
@@ -85,8 +85,8 @@ module.exports = function(grunt) {
           ]
         },
         options: {
-          // proxy: 'bootstrap3.dev',
-          server: './',
+          // proxy: 'localhost/bootstrap-3-setup/',
+          server: './', // Comment this line when using PHP
           notify: false,
           open: true,
           port: 3030,
