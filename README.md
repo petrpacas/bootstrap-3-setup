@@ -1,10 +1,10 @@
-# My Bootstrap 3 Setup (v2.1.7) #
+# My Bootstrap 3 Setup (v2.2.0) #
 
 A personal project setup for my ease-of-mind
 
 ## Current Bootstrap version ##
 
-3.3.6 (SCSS)
+3.3.7 (SCSS)
 
 ## How to use ##
 
