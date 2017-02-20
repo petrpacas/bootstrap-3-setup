@@ -1,16 +1,16 @@
 {
   "name": "bootstrap-3-setup",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "A personal project setup for my ease-of-mind",
   "main": "Gruntfile.js",
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^6.7.2",
+    "autoprefixer": "^6.7.7",
     "cssnano": "^3.10.0",
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-uglify": "^2.3.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^2.0.0"
