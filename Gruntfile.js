@@ -96,7 +96,7 @@ module.exports = function(grunt) {
           ]
         },
         options: {
-          // proxy: 'localhost/bootstrap-3-setup/',
+          // proxy: 'localhost/grunt-bootstrap-3-setup/',
           server: './', // Comment this line when using PHP
           notify: false,
           open: true,

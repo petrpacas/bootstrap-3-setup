@@ -1,29 +1,36 @@
-# My Bootstrap 3 Setup (v2.2.2) #
+# Grunt + Bootstrap 3 Setup (v2.2.4) #
 
-A personal project setup for my ease-of-mind
+Starter pack for ease of mind
 
 ## Current Bootstrap version ##
 
-3.3.7 (SCSS)
+*3.3.7 (SCSS)*
+
+## Build requirements ##
+
+- [Node.js](https://nodejs.org/en/download/)
+- [Grunt's CLI](https://gruntjs.com/getting-started/)
 
 ## How to use ##
 
-When using PHP, change proxy in the Gruntfile's BrowserSync settings accordingly
+(When using PHP, change proxy in the Gruntfile's BrowserSync settings accordingly)
 
 ```
-npm install # installs node modules
+npm install
+# install node modules
+
 # and then
-grunt # starts reload server (localhost:3030)
+
+grunt
+# start and open reload server (localhost:3030)
+
 # or
-grunt dev # runs dev tasks and starts reload server
+
+grunt dev
+# run dev tasks and start reload server
+
 # or
-grunt build # runs build tasks for production
+
+grunt build
+# run build tasks for production
 ```
-
-## Created by ##
-
-Petr Pacas
-
-[petr.pacas@gmail.com](mailto:petr.pacas@gmail.com)
-
-http://petrpacas.com/
