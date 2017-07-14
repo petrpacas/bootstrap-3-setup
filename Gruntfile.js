@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
-
   grunt.initConfig({
     vars: {
       jsSrc: [
@@ -18,44 +17,39 @@ module.exports = function(grunt) {
         './src/js/main.js'
       ]
     },
+    clean: {
+      target: ['dist']
+    },
     concat: {
       options: {
         sourceMap: true
       },
-      dev: {
+      target: {
         src: "<%= vars.jsSrc %>",
-        dest: './dist/js/main.min.js'
-      },
-      build: {
-        src: "<%= vars.jsSrc %>",
-        dest: './dist/js/main.js'
+        dest: './dist/main.js'
       }
     },
     uglify: {
       options: {
-        mangle: false,
+        mangle: true,
+        keep_fnames: true,
         sourceMap: true,
-        sourceMapIn: './dist/js/main.js.map'
+        sourceMapIn: './dist/main.js.map'
       },
-      build: {
+      target: {
         files: {
-          './dist/js/main.min.js': './dist/js/main.js'
+          './dist/main.js': './dist/main.js'
         }
       }
     },
     sass: {
       options: {
-        outFile: './dist/css/main.css',
+        outFile: './dist/main.css',
         sourceMap: true
       },
-      dev: {
+      target: {
         files: {
-          './dist/css/main.min.css': './src/scss/main.scss'
-        }
-      },
-      build: {
-        files: {
-          './dist/css/main.css': './src/scss/main.scss'
+          './dist/main.css': './src/scss/main.scss'
         }
       }
     },
@@ -65,34 +59,27 @@ module.exports = function(grunt) {
           inline: false
         },
         processors: [
-          require('autoprefixer')({
-            browsers: [
-              'Android 2.3',
-              'Android >= 4',
-              'Chrome >= 20',
-              'Firefox >= 24',
-              'Explorer >= 8',
-              'iOS >= 6',
-              'Opera >= 12',
-              'Safari >= 6'
-            ]
-          }),
-          require('cssnano')()
+          require('autoprefixer'),
+          require('cssnano')({
+            discardComments: {
+              removeAll: true,
+            }
+          })
         ]
       },
-      build: {
-        src: './dist/css/main.css',
-        dest: './dist/css/main.min.css'
+      target: {
+        src: './dist/main.css',
+        dest: './dist/main.css'
       }
     },
     browserSync: {
-      dev: {
+      target: {
         bsFiles: {
           src: [
             // '**/*.php',
             '**/*.html',
-            './dist/css/main.min.css',
-            './dist/js/main.min.js'
+            './dist/main.css',
+            './dist/main.js'
           ]
         },
         options: {
@@ -100,7 +87,7 @@ module.exports = function(grunt) {
           server: './', // Comment this line when using PHP
           notify: false,
           open: true,
-          port: 3030,
+          port: 2222,
           watchTask: true
         }
       }
@@ -108,15 +95,16 @@ module.exports = function(grunt) {
     watch: {
       js: {
         files: ['./src/js/**/*.js'],
-        tasks: ['concat:dev']
+        tasks: ['concat']
       },
       css: {
         files: ['./src/scss/**/*.scss'],
-        tasks: ['sass:dev']
+        tasks: ['sass']
       }
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-sass');
@@ -124,8 +112,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
 
-  grunt.registerTask('default', ['browserSync', 'watch']);
-  grunt.registerTask('dev', ['concat:dev', 'sass:dev', 'browserSync', 'watch']);
-  grunt.registerTask('build', ['concat:build', 'uglify', 'sass:build', 'postcss']);
-
+  grunt.registerTask('default', ['clean', 'concat', 'sass', 'browserSync', 'watch']);
+  grunt.registerTask('build', ['clean', 'concat', 'uglify', 'sass', 'postcss']);
 };

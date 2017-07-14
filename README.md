@@ -1,4 +1,4 @@
-# Grunt + Bootstrap 3 Setup (v2.2.4) #
+# Grunt + Bootstrap 3 Setup (v2.3.0) #
 
 Starter pack for ease of mind
 
@@ -13,24 +13,13 @@ Starter pack for ease of mind
 
 ## How to use ##
 
+`npm install`
+installs node modules
+
+`grunt`
+starts and opens reload server for development (localhost:2222)
+
+`grunt build`
+runs build tasks for staging/production
+
 (When using PHP, change proxy in the Gruntfile's BrowserSync settings accordingly)
-
-```
-npm install
-# install node modules
-
-# and then
-
-grunt
-# start and open reload server (localhost:3030)
-
-# or
-
-grunt dev
-# run dev tasks and start reload server
-
-# or
-
-grunt build
-# run build tasks for production
-```
