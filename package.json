@@ -1,6 +1,6 @@
 {
   "name": "grunt-bootstrap-3-setup",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Starter pack for ease of mind",
   "author": "Petr Pacas <petr.pacas@gmail.com> (http://petrpacas.com/)",
   "license": "MIT",
@@ -20,13 +20,13 @@
     "Safari >= 6"
   ],
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
+    "autoprefixer": "^7.1.4",
     "cssnano": "^3.10.0",
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-uglify": "^3.1.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^2.0.0"
