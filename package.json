@@ -1,6 +1,6 @@
 {
   "name": "grunt-bootstrap-3-setup",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Starter pack for ease of mind",
   "author": "Petr Pacas <petr.pacas@gmail.com> (http://petrpacas.com/)",
   "license": "MIT",
@@ -9,16 +9,9 @@
     "url": "git@github.com:petrpacas/grunt-bootstrap-3-setup.git"
   },
   "homepage": "https://github.com/petrpacas/grunt-bootstrap-3-setup",
-  "browserslist": [
-    "Android 2.3",
-    "Android >= 4",
-    "Chrome >= 20",
-    "Firefox >= 24",
-    "Explorer >= 8",
-    "iOS >= 6",
-    "Opera >= 12",
-    "Safari >= 6"
-  ],
+  "dependencies": {
+    "jquery": "^1.12.4"
+  },
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "cssnano": "^3.10.0",
@@ -28,7 +21,17 @@
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-uglify": "^3.1.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-postcss": "^0.8.0",
+    "grunt-postcss": "^0.9.0",
     "grunt-sass": "^2.0.0"
-  }
+  },
+  "browserslist": [
+    "Android 2.3",
+    "Android >= 4",
+    "Chrome >= 20",
+    "Firefox >= 24",
+    "Explorer >= 8",
+    "iOS >= 6",
+    "Opera >= 12",
+    "Safari >= 6"
+  ]
 }
