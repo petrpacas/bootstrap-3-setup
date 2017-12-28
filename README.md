@@ -1,4 +1,4 @@
-# Grunt + Bootstrap 3 Setup (v2.3.2) #
+# Grunt + Bootstrap 3 Setup (v2.3.3) #
 
 Starter pack for ease of mind
 
